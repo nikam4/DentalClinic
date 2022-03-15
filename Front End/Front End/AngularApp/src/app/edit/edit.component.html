@@ -1,0 +1,77 @@
+<div class="row" >
+    <div class="col-md-2" style="background-color: rgba(0, 0, 0, 0.466); height: 770px;">
+       <br>
+        <a routerLink='/newappointment'>
+            <h5 style="color: white;padding-left: 8%;" >
+                Book New Appointment
+            </h5>
+        </a><br>
+       
+        <a routerLink='/editprofile'>
+            <h5 style="color: white;padding-left: 8%;">
+                Edit Profile
+            </h5>
+        </a><br>
+        <a routerLink='/reports'>
+            <h5 style="color: white;padding-left: 8%;">
+                Check Reports    
+            </h5>
+        </a><br>
+
+        <a routerLink='/checkuserappointment'>
+            <h5 style="color: white;padding-left: 8%;">
+                Appointments    
+            </h5>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-7">
+            <br>
+            <br>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <form  (ngSubmit)="update()" style="padding-left: 5%;">
+                            <h4 style="padding-left: 25%;">Edit User information</h4>
+                        
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">First Name :</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" [(ngModel)]="user.firstName">
+                            </div>
+                
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Middle Name :</label>
+                                <input type="text" class="form-control" id="middleName" name="middleName" placeholder="" [(ngModel)]="user.middleName">
+                            </div>
+                
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Last Name :</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" [(ngModel)]="user.lastName">
+                            </div>
+                
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Address :</label>
+                                <input type="text" class="form-control" id="address" name="address" placeholder="" [(ngModel)]="user.address">
+                            </div>
+                
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Change password :</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="" [(ngModel)]="user.password">
+                            </div>
+                
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Mobile No :</label>
+                                <input type="text" class="form-control" id="mobileNo" name="mobileNO" placeholder="" [(ngModel)]="user.mobileNo">
+                            </div>
+                            
+                            <button type="submit" style="background-color: rgb(51, 49, 49);" class="btn btn-primary">Update</button>&nbsp;
+                            <button type="reset" style="background-color: crimson;"  class="btn btn-primary">Cancel</button>
+                        </form>
+                    </div>
+                </div> <br><br>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>

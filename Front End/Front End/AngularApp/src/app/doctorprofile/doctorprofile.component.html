@@ -1,0 +1,86 @@
+
+      <div class="row" > 
+
+        <div class="col-md-2" style="background-color: rgba(0, 0, 0, 0.466);height: 870px;">
+            <br>
+            <a routerLink='/editdrprofile'>
+                <h5 style="color: white;padding-left: 8%;">
+                    Edit Profile
+                </h5>
+            </a><br>
+                            
+            <a routerLink='/drappointmentlist'>
+                <h5 style="color: white;padding-left: 8%;">
+                    View All Appointments
+                </h5>
+            </a><br>
+            <a routerLink='/addreports'>
+                <h5 style="color: white;padding-left: 8%;">
+                    Add Reports    
+                </h5>
+            </a><br>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-8">
+                <br>
+                <br>
+                    <div class="card shadow">
+                        <div class="card-body">
+                        
+                            
+                            <form style="padding-left: 10%;">
+                                <legend style="padding-left: 25%;">Doctor Details</legend>
+                                <div style="width: 500px;" class="form-group">
+                                    <label for="">First Name :</label>
+                                    <input type="text" readonly class="form-control" id="firstName" name="firstName" placeholder="" [(ngModel)]="doctor.firstName">
+                                </div>
+                
+                                <div style="width: 500px;" class="form-group">
+                                    <label for="">Middle Name :</label>
+                                    <input type="text" readonly class="form-control" id="mname" name="mname" placeholder="" [(ngModel)]="doctor.middleName">
+                                </div>
+                
+                                <div style="width: 500px;" class="form-group">
+                                    <label for="">Last Name :</label>
+                                    <input type="text" readonly class="form-control" id="lname" name="lname" placeholder="" [(ngModel)]="doctor.lastName">
+                                </div>
+                
+                                <div style="width: 500px;" class="form-group">
+                                    <label for="">Address :</label>
+                                    <input type="text" readonly class="form-control" id="address" name="address" placeholder="" [(ngModel)]="doctor.address">
+                                </div>
+                
+                                <div style="width: 500px;" class="form-group">
+                                    <label for="">Email :</label>
+                                    <input type="text" readonly class="form-control" id="email" name="email" placeholder="" [(ngModel)]="doctor.email">
+                                </div>
+                
+                                <div style="width: 500px;" class="form-group">
+                                    <label for="">Mobile No :</label>
+                                    <input type="text" readonly class="form-control" id="mobileNo" name="mobileNo" placeholder="" [(ngModel)]="doctor.mobileNo">
+                                </div>
+                    
+                                <div style="width: 500px;" class="form-group">
+                                    <label for="">Gender :</label>
+                                    <input type="text" readonly class="form-control" id="gender" name="gender" placeholder="" [(ngModel)]="doctor.gender">
+                                </div>
+                
+                                <div style="width: 500px;" class="form-group">
+                                    <label for="">Date of birth :</label>
+                                    <input type="text"readonly class="form-control" id="dob" name="dob" placeholder="" [(ngModel)]="doctor.dob">
+                                </div>
+                
+                            </form>
+                
+                    </div>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>  
+    </div>
+

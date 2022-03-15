@@ -1,0 +1,89 @@
+    
+        <div class="row" >
+            <div class="col-md-2" style="background-color: rgba(0, 0, 0, 0.466);height:850px">
+                <br>
+                <a routerLink='/newappointment'>
+                    <h5 style="color: white;padding-left: 8%;">
+                        Book New Appointment
+                    </h5>
+                </a><br>
+                
+                <a routerLink='/editprofile'>
+                    <h5 style="color: white;padding-left: 8%;">
+                        Edit Profile
+                    </h5>
+                </a><br>
+              
+                <a routerLink='/reports'>
+                    <h5 style="color: white;padding-left: 8%;">
+                        Check Reports    
+                    </h5>
+                </a><br>
+
+                <a routerLink='/checkuserappointment'>
+                    <h5 style="color: white;padding-left: 8%;">
+                        Appointments    
+                    </h5>
+                </a>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-8">
+                    <br>
+                    <br>
+                        <div class="card shadow">
+                            <div class="card-body">
+                            
+                                
+                                <form style="padding-left: 10%;">
+                                    <legend style="padding-left: 25%;">User Details</legend>
+                                    <div style="width: 500px;" class="form-group">
+                                        <label for="">First Name :</label>
+                                        <input type="text" readonly class="form-control" id="firstName" name="firstName" placeholder="" [(ngModel)]="user.firstName">
+                                    </div>
+                
+                                    <div style="width: 500px;" class="form-group">
+                                        <label for="">Middle Name :</label>
+                                        <input type="text" readonly class="form-control" id="mname" name="mname" placeholder="" [(ngModel)]="user.middleName">
+                                    </div>
+                
+                                    <div style="width: 500px;" class="form-group">
+                                        <label for="">Last Name :</label>
+                                        <input type="text" readonly class="form-control" id="lname" name="lname" placeholder="" [(ngModel)]="user.lastName">
+                                    </div>
+                
+                                    <div style="width: 500px;" class="form-group">
+                                        <label for="">Address :</label>
+                                        <input type="text" readonly class="form-control" id="address" name="address" placeholder="" [(ngModel)]="user.address">
+                                    </div>
+                
+                                    <div style="width: 500px;" class="form-group">
+                                        <label for="">Email :</label>
+                                        <input type="text" readonly class="form-control" id="email" name="email" placeholder="" [(ngModel)]="user.email">
+                                    </div>
+                
+                                    <div style="width: 500px;" class="form-group">
+                                        <label for="">Mobile No :</label>
+                                        <input type="text" readonly class="form-control" id="mobileNo" name="mobileNo" placeholder="" [(ngModel)]="user.mobileNo">
+                                    </div>
+                        
+                                    <div style="width: 500px;" class="form-group">
+                                        <label for="">Gender :</label>
+                                        <input type="text" readonly class="form-control" id="gender" name="gender" placeholder="" [(ngModel)]="user.gender">
+                                    </div>
+                
+                                    <div style="width: 500px;" class="form-group">
+                                        <label for="">Date of birth :</label>
+                                        <input type="text"readonly class="form-control" id="dob" name="dob" placeholder="" [(ngModel)]="user.dob">
+                                    </div>
+                
+                                </form>
+                        </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>  

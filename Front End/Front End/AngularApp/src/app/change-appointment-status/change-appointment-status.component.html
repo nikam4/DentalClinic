@@ -1,0 +1,77 @@
+<div class="row"  > 
+
+    <div class="col-md-2" style="background-color: rgba(0, 0, 0, 0.466);height: 800px;">
+        <br>
+        <a routerLink='/editdrprofile'>
+            <h5 style="color: white;padding-left: 8%;">
+                Edit Profile
+            </h5>
+        </a><br>
+                        
+        <a routerLink='/drappointmentlist'>
+            <h5 style="color: white;padding-left: 8%;">
+                View All Appointments
+            </h5>
+        </a><br>
+        <a routerLink='/addreports'>
+            <h5 style="color: white;padding-left: 8%;">
+                Add Reports    
+            </h5>
+        </a><br>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8">
+            <br>
+            <br>
+                <div class="card shadow">
+                    <div class="card-body">
+                    
+                        
+                        <form style="padding-left: 10%;" (ngSubmit)="onSubmit()"#form="ngForm">
+                            <legend style="padding-left: 25%;">Appointment Details</legend>
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Patient Name :</label>
+                                <input type="text" readonly class="form-control" id="patientName" name="patientName" placeholder="" [(ngModel)]="appointment.patientName">
+                            </div>
+            
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Doctor Name :</label>
+                                <input type="text" readonly class="form-control" id="doc" name="doc" placeholder="" [(ngModel)]="appointment.doc.firstName">
+                            </div>
+            
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Date :</label>
+                                <input type="text" readonly class="form-control" id="date" name="date" placeholder="" [(ngModel)]="appointment.date">
+                            </div>
+            
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Timeslot :</label>
+                                <input type="text" readonly class="form-control" id="time" name="time" placeholder="" [(ngModel)]="appointment.timeslot.time">
+                            </div>
+            
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Mobile No :</label>
+                                <input type="text" readonly class="form-control" id="mobile" name="mobile" placeholder="" [(ngModel)]="appointment.mobile">
+                            </div>
+                            
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Change status :</label>
+                                
+                                <select name="status" id="input" [(ngModel)]="appointment.status" style="width: fit-content;" class="form-control" >
+                                    <option value="c">Checked</option>
+                                    <option value="n">Not Checked</option>
+
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-btn" style="background-color: rgb(51, 49, 49);color: white;">Update Appointment Status</button>
+                        </form>
+                </div>
+                </div>
+                <br>
+                <br>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>  

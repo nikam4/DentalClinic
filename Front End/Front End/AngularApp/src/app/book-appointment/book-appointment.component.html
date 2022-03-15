@@ -1,0 +1,95 @@
+
+        <div class="row" >
+            <div class="col-md-2" style="background-color: rgba(0, 0, 0, 0.466);height:770px">
+                <br>
+                <a routerLink='/newappointment'>
+                    <h5 style="color: white;padding-left: 8%;">
+                        Book New Appointment
+                    </h5>
+                </a><br>
+                
+                <a routerLink='/editprofile'>
+                    <h5 style="color: white;padding-left: 8%;">
+                        Edit Profile
+                    </h5>
+                </a><br>
+              
+                <a routerLink='/reports'>
+                    <h5 style="color: white;padding-left: 8%;">
+                        Check Reports    
+                    </h5>
+                </a><br>
+
+                <a routerLink='/checkuserappointment'>
+                    <h5 style="color: white;padding-left: 8%;">
+                        Appointments    
+                    </h5>
+                </a>
+                
+            </div>
+           
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-8">
+                    <br>
+                    <br>
+                        <div class="card shadow">
+                            <div class="card-body">
+                              
+                                
+                                <form (ngSubmit)="onSubmit()" #form="ngForm" style="padding-left: 10%;">
+                                    <h4 style="padding-left: 20%;">New Appointment</h4>
+                                    <br>
+                                    <div style="width: 500px;" class="form-group">
+                                        <label for="">Patient Name :</label>&nbsp;
+                                        <i class="fa fa-user icon"></i>
+                                        <input type="text" class="form-control" id="pname" required="required" name="pname" placeholder="Enter Patient's name" [(ngModel)]="appointment.patientName">
+                                    </div>
+                                    <div  style="width: 500px;" class="form-group">
+                                        <label for="">Mobile No :</label> &nbsp;
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <input type="text" class="form-control" id="mobile" required="required" name="mobile" placeholder="Enter mobile no." [(ngModel)]="appointment.mobile">
+                                    </div>
+                                    <div style="width: 500px;" class="form-group">
+                                        <label > Select Doctor : &nbsp;</label>&nbsp;
+                                        <i class="fa fa-stethoscope" aria-hidden="true"></i>
+                                      
+                                        <select [(ngModel)]="drid"name="drid" placeholder="Select doctor" required="required" id="drid" class="form-control" >
+                                            <option *ngFor="let item of doctors"  value="{{item.email}}" >Dr.{{item.firstName}}</option>
+                                        </select>
+                                        <br>
+                                        <button style="width: auto;" type="button" (click)="getTimeslot()" class="btn btn-btn btn btn-large btn-block btn-success">Check timeslots</button>
+                                        
+                                    </div>
+                                    
+                                    <div style="width: 500px;" class="form-group">
+                                        <label for="">Select Date :</label> &nbsp;
+                                        <i class="fa fa-calendar" aria-hidden="true"></i> &nbsp;
+                                        
+                                        <input style="width: auto;" [(ngModel)]="appointment.date" type="date" name="date" id="date" class="form-control" value="" required="required" title="">
+                                        
+                                    </div>
+                                    <div>
+                                        <label for="">Select Timeslot :</label>
+                                        <select [(ngModel)]="appointment.timeslot.id" name="id" id="id" class="form-control"  required="required" style="width: fit-content;">
+                                            <option *ngFor="let item of timeslots" value="{{item.id}}">{{item.time}}</option>
+                                        </select>
+                                        
+                                    </div>
+                                    <br>
+                                    
+                                    <button type="submit" class="btn btn-btn" style="background-color: rgb(51, 49, 49);color: white;">Book Appointment</button> &nbsp;
+                                    <button type="reset" style="background-color: crimson;"  class="btn btn-primary">Cancel</button>       
+                                </form>
+    
+    
+    
+                            </div>
+                          </div>
+                          <br>
+                          <br>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Appointments</title>
+
+    </head>
+    <body>
+
+
+
+        <div class="row" style="padding-top:-10px; margin-top:-20px">
+            <div class="col-md-2" style="background-color: rgba(0, 0, 0, 0.466);height: 600px;">
+                
+                <a routerLink='/newappointment'>
+                    <h4 style="color: white;padding-left: 8%;">
+                        Book New Appointment
+                    </h4>
+                </a><br>
+                
+                <a routerLink='/editprofile'>
+                    <h4 style="color: white;padding-left: 8%;">
+                        Edit Profile
+                    </h4>
+                </a><br>
+           
+                <a routerLink='/reports'>
+                    <h4 style="color: white;padding-left: 8%;">
+                        Check Reports    
+                    </h4>
+                </a><br>
+
+                <a routerLink='/appointments'>
+                    <h4 style="color: white;padding-left: 8%;">
+                        Appointments    
+                    </h4>
+                </a>
+            </div>
+            <div class="col-md-10">
+
+                <h3 style="padding-left: 20%;"><b><u>Appointments</u></b></h3>
+                <table class="table table-hover" style="width: 800px;">
+                    <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Patient Name</th>
+                            <th>Appointment Date</th>
+                            <th>Doctor's Name</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let app of appointments">
+                            <td>{{app.id}}</td>
+                            <td>{{app.patient_name}}</td>
+                            <td>{{app.date}}</td>
+                            <td>{{app.doctor_id.first_name}}</td>
+                            <td>{{app.timeslot_id.time}}</td>
+                            <td>
+                                <a routerLink='/editappointments'>
+                                    Edit
+                                </a>
+                            </td>
+                            <td>
+                                <a routerLink='/appointments'>
+                                    Cancel
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+
+            </div>
+        </div>
+
+    </body>
+</html>

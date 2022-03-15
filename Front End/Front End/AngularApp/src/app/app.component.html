@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        
+        <div style="padding-top:-10px; margin-top:-10px">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark margin-auto" style="max-width:100%;">
+               
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/img/logo.png" width="50" height="50" alt="">
+                  </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ">
+                    
+                    <li  class="nav-item">
+                        <a class="nav-link" style="color: white;font-size: large;" routerLink="/about">About us</a>
+                    </li>
+
+                    <li  class="nav-item">
+                        <a class="nav-link" style="color: white; font-size: large" routerLink="/home">Home</a>
+                    </li>
+                    <li  class="nav-item" *ngIf="!service.isLoggedIn()">
+                        <a class="nav-link" style="color: white; font-size: large" routerLink="/register">Register</a>
+                    </li>
+                    <li  class="nav-item" *ngIf="authPatient()">
+                        <a class="nav-link" style="color: white; font-size: large" routerLink="/profile">Profile</a>
+                    </li>
+
+                    <li  class="nav-item" *ngIf="authDoctor()">
+                        <a class="nav-link" style="color: white; font-size: large" routerLink="/drprofile">Profile</a>
+                    </li>
+
+                    <li  class="nav-item" *ngIf="authAdmin()">
+                        <a class="nav-link" style="color: white; font-size: large" routerLink="/admin">Profile</a>
+                    </li>
+
+                    <li  class="nav-item" *ngIf="!service.isLoggedIn()">
+                        <a class="nav-link" style="color: white; font-size: large" routerLink="/login">Login</a>
+                    </li>
+                </ul>
+            </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li  *ngIf="service.isLoggedIn()" >
+                        <button type="button" class="btn btn-danger center" (click)="logout()">
+                            <span class="glyphicon glyphicon-log-out" ></span> Log out
+                        </button>
+                    </li>
+                </ul>
+                
+            </nav>
+            
+        </div>
+        <div>
+
+        </div>
+        <router-outlet></router-outlet>
+    
+        
+
+    </body>
+</html>
+
+

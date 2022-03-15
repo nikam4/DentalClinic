@@ -1,0 +1,111 @@
+<div class="row"  >
+    <div class="col-md-2" style="background-color: rgba(0, 0, 0, 0.466);height: 1221px;">
+        <br>
+
+        <a routerLink='/editadminprofile'>
+            <h5 style="color: white;padding-left: 8%;">
+                Edit Profile
+            </h5>
+        </a><br>
+        <a routerLink='/listallappointment'>
+            <h5 style="color: white;padding-left: 8%;">
+                List of Appointments
+            </h5>
+        </a><br>
+        <a routerLink='/doctorslist'>
+            <h5 style="color: white;padding-left: 8%;">
+                List of Doctors    
+            </h5>
+        </a><br>
+
+        <a routerLink='/newdoctor'>
+            <h5 style="color: white;padding-left: 8%;">
+                Add new Doctor    
+            </h5>
+        </a><br>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8">
+            <br>
+            <br>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <br>
+                        <h4 class="center" style="margin-left: 220px;">Add New Doctor</h4>
+                        <br>
+                        <form style="margin-left: 80px;" (ngSubmit)="insert()">
+                            <div style="width: 500px" class="form-group">
+                                <label for="">First Name</label>
+                                <input  type="text" class="form-control" required="required" id="firstName" name="firstName" placeholder="Enter First Name" [(ngModel)]="doctor.firstName">
+                            </div>
+                        
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Middle Name</label>
+                                <input type="text" class="form-control" id="middleName" name="middleName" placeholder="Enter Middle Name" [(ngModel)]="doctor.middleName">
+                            </div>
+                        
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name" [(ngModel)]="doctor.lastName">
+                            </div>
+                            
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Enter address</label>
+                                <input type="text" class="form-control"  id="address" name="address" placeholder="Enter address" [(ngModel)]="doctor.address">
+                            </div>
+                        
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Enter Email</label>
+                                <input type="text" class="form-control" required="required" id="email" name="email" placeholder="Enter email" [(ngModel)]="doctor.email">
+                            </div>
+                        
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Enter Password</label>
+                                <input type="password" class="form-control" required="required" id="password" name="password" placeholder="Enter password" [(ngModel)]="doctor.password">
+                            </div>
+                        
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Enter Age</label>
+                                <input type="text" class="form-control" id="age" name="age" placeholder="Enter Age" [(ngModel)]="doctor.age">
+                            </div>
+                        
+                            <div style="width: 500px;" class="form-group">
+                                <label for="">Enter Mobile No</label>
+                                <input type="text" class="form-control" id="mobileNo" required="required" name="mobileNo" placeholder="Enter mobile no." [(ngModel)]="doctor.mobileNo">
+                            </div>
+                        
+                            <div style="width: 400px;" class="form-group">
+                                <label for="">Select Date of birth :</label> &nbsp;
+                                
+                                <input type="date" name="dob" id="dob" style="width: 300px;" class="form-control" value="" required="required" title="dob" [(ngModel)]="doctor.dob">        
+                            </div>
+                        
+                            <div  class="form-group">
+                                <label for="">Select Gender :</label> 
+                                
+                                <select name="gender" id="gender" style="width: 200px;"[(ngModel)]="doctor.gender" class="form-control">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                             </div>
+                            <br>
+                            <button  type="submit" class="btn btn-primary">Submit</button>
+                        
+                            &nbsp;
+                            
+                            <button type="reset" style="background-color: crimson;"  class="btn btn-primary">Cancel</button>    
+                            
+                        </form>
+                      
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>    
+</div>

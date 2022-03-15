@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+<br>
+<br>
+            <div class="card shadow">
+                <div class="card-body">
+                    <br>
+                    <h4 class="center">Sign Up</h4>
+                    <br>
+                    <form style="margin-left: 80px;" (ngSubmit)="insert()">
+                        <div style="width: 500px" class="form-group">
+                            <label for="">First Name</label>
+                            <input  type="text" class="form-control" required="required" id="fName" name="fName" placeholder="Enter First Name" [(ngModel)]="user.firstName">
+                        </div>
+                    
+                        <div style="width: 500px;" class="form-group">
+                            <label for="">Middle Name</label>
+                            <input type="text" class="form-control" id="mName" name="mName" placeholder="Enter Middle Name" [(ngModel)]="user.middleName">
+                        </div>
+                    
+                        <div style="width: 500px;" class="form-group">
+                            <label for="">Last Name</label>
+                            <input type="text" class="form-control" required="required" id="lName" name="lName" placeholder="Enter Last Name" [(ngModel)]="user.lastName">
+                        </div>
+                        
+                        <div style="width: 500px;" class="form-group">
+                            <label for="">Enter address</label>
+                            <input type="text" class="form-control"  id="address" name="address" placeholder="Enter address" [(ngModel)]="user.address">
+                        </div>
+                    
+                        <div style="width: 500px;" class="form-group">
+                            <label for="">Enter Email</label>
+                            <input type="text" class="form-control" required="required" id="email" name="email" placeholder="Enter email" [(ngModel)]="user.email">
+                        </div>
+                    
+                        <div style="width: 500px;" class="form-group">
+                            <label for="">Enter Password</label>
+                            <input type="password" class="form-control" required="required" id="password" name="password" placeholder="Enter password" [(ngModel)]="user.password">
+                        </div>
+                    
+                        <div style="width: 500px;" class="form-group">
+                            <label for="">Enter Age</label>
+                            <input type="text" class="form-control" id="age" name="age" placeholder="Enter Age" [(ngModel)]="user.age">
+                        </div>
+                    
+                        <div style="width: 500px;" class="form-group">
+                            <label for="">Enter Mobile No</label>
+                            <input type="text" class="form-control" id="mobile" required="required" name="mobile" placeholder="Enter mobile no." [(ngModel)]="user.mobileNo">
+                        </div>
+                    
+                        <div style="width: 400px;" class="form-group">
+                            <label for="">Select Date of birth :</label> &nbsp;
+                            
+                            <input type="date" name="dob" id="input" style="width: 300px;" class="form-control" value="" required="required" title="" [(ngModel)]="user.dob">
+                            
+                        </div>
+                    
+                        <div  class="form-group">
+                            <label for="">Select Gender :</label> 
+                            
+                            <select name="gender" id="input" style="width: 200px;"[(ngModel)]="user.gender" class="form-control">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            
+                            
+                        </div>
+                        <br>
+                        <button  type="submit" [routerLink]="['/register']" routerLinkActive="router-link-active"  class="btn btn-primary">SignUp</button>
+                    
+                        &nbsp;
+                        
+                        <button type="reset" style="background-color: crimson;"  class="btn btn-primary">Cancel</button>    
+                        <br><br><br><br>
+                        <p>{{message}}</p>
+                    </form>
+                  
+                </div>
+              </div>
+              <br>
+              <br>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+

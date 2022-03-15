@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-2" style="background-color: rgba(0, 0, 0, 0.466);height: 770px;">
+        <br>
+        <a routerLink='/editadminprofile'>
+            <h5 style="color: white;padding-left: 8%;">
+                Edit Profile
+            </h5>
+        </a><br>
+        <a routerLink='/listallappointment'>
+            <h5 style="color: white;padding-left: 8%;">
+                List of Appointments
+            </h5>
+        </a><br>
+        <a routerLink='/doctorslist'>
+            <h5 style="color: white;padding-left: 8%;">
+                List of Doctors    
+            </h5>
+        </a><br>
+
+        <a routerLink='/newdoctor'>
+            <h5 style="color: white;padding-left: 8%;">
+                Add new Doctor    
+            </h5>
+        </a><br>
+
+    </div>
+    <div class="col-md-10" style="padding-left: 10%;">
+        <br>
+        <h4 style="padding-left: 20%;">Appointments</h4>
+        <table class="table table-hover" style="width: 800px;">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Patient Name</th>
+                    <th>Appointment Date</th>
+                    <th>Doctor Name</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let app of appointments">
+                    <td>{{app.id}}</td>
+                    <td>{{app.patientName}}</td>
+                    <td>{{app.date}}</td>
+                    <td>Dr. {{app.doc.firstName}} &nbsp;{{app.doc.lastName}}</td>
+                    <td>{{app.timeslot.time}}</td>
+                    
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

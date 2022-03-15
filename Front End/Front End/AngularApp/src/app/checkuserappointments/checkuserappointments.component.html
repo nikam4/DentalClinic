@@ -1,0 +1,59 @@
+
+        <div class="row"  >
+            <div class="row" class="col-md-2" style="background-color: rgba(0, 0, 0, 0.466);height:770px;" >
+                    <br>
+                <a routerLink='/newappointment'>
+                    <h5 style="color: white;padding-left: 8%;">
+                        Book New Appointment
+                    </h5>
+                </a><br>
+                
+                <a routerLink='/edit/:No'>
+                    <h5 style="color: white;padding-left: 8%;">
+                        Edit Profile
+                    </h5>
+                </a><br>
+                <a routerLink='/reports'>
+                    <h5 style="color: white;padding-left: 8%;">
+                        Check Reports    
+                    </h5>
+                </a><br>
+
+                <a routerLink='/checkuserappointment'>
+                    <h5 style="color: white;padding-left: 8%;">
+                        Appointments    
+                    </h5>
+                </a>
+            </div>
+            <div class="col-md-10" style="padding-left: 10%;">
+<br>
+                <h4 style="padding-left: 20%;">Appointments</h4>
+                <table class="table table-hover" style="width: 800px;">
+                    <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Patient Name</th>
+                            <th>Appointment Date</th>
+                            <th>Doctor's Name</th>
+                            <th>Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let app of appointments">
+                            <td>{{app.id}}</td>
+                            <td>{{app.patientName}}</td>
+                            <td>{{app.date}}</td>
+                            <td>{{app.doc.firstName}}</td>
+                            <td>{{app.timeslot.time}}</td>
+                          
+                            <td>
+                                <a onkeypress="deleteAppointment()" routerLink="/delete/{{app.id}}">
+                                    Cancel
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>   
+        </div>
